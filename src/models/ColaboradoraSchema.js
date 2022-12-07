@@ -64,8 +64,7 @@ const ColaboradoraSchema = new mongoose.Schema({
     },
     
     forma_pagamento: [{
-        type: String,
-        required: true
+        
     }]
 })
 

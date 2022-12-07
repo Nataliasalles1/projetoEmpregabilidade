@@ -12,7 +12,6 @@ const criarColaboradora = async(req, res) => {
             telefone: telefone,
             domicilio: domicilio,
             local_proprio: local_proprio,
-            bairros_atuantes: bairros_atuantes,
             endereco: {
             cep: cep,
             rua: rua,
@@ -31,7 +30,7 @@ const criarColaboradora = async(req, res) => {
             colaboradora: salvarColaboradora
         })
 
-    }catch(error){
+    } catch(error){
         res.status(400).json({
             message: error.message
         })
@@ -57,10 +56,10 @@ const buscarColaboradora = async(req, res) => {
 }
 
 const buscarModalidade = async(req, res) => {
-    const modalidade = req.query.colaboradora.modalidade.toUpperCase()
+    const modalidade = req.query.modalidade.toUpperCase()
     try {
         const colaboradoras = await ColaboradoraSchema.filter(colaboradora => colaboradora.modalidade.toUpperCase().includes(modalidade))
-        if(encontrarPorTitulo.length == 0) throw new Error(`Desculpas, não temos coladoradoras na modalidade ${modalidade}`)
+        if(colaboradoras.length == 0) throw new Error(`Desculpas, não temos coladoradoras na modalidade ${modalidade}`)
         res.status(200).json({
             message:"Colaboradoras localizadas",
             Colaboradoras: colaboradoras
@@ -75,10 +74,10 @@ const buscarModalidade = async(req, res) => {
 }
 
 const buscarPorBairro = async(req, res) => {
-    const bairro = req.query.colaboradora.bairro.toUpperCase()
+    const bairro = req.query.bairro.toUpperCase()
     try {
         const colaboradoras = await ColaboradoraSchema.filter(colaboradora => colaboradora.bairro.toUpperCase().includes(bairro))
-        if(encontrarPorTitulo.length == 0) throw new Error(`Desculpas, não temos coladoradoras no bairro ${bairro}`)
+        if(colaboradoras.length == 0) throw new Error(`Desculpas, não temos coladoradoras no bairro ${bairro}`)
         res.status(200).json({
             message:"Colaboradoras localizadas",
             Colaboradoras: colaboradoras
@@ -129,14 +128,15 @@ const atualizarColaboradora = async (req, response) => {
             })
         }
 
+        /*
         if (String(cpf).length > 14 || String(cpf).length < 14){
             response.status(404).json({
                 message:`CPF inválido, digite novamente.`
             })
-        }
+        }*/
 
         const colaboradoraEncontrada = await ColaboradoraSchema.updateOne({ 
-            nome, cpf, telefone, domicilio, local_proprio, endereco:{cep, rua, numero, complemento, estado, cidade, bairro}, modalidade ,forma_pagamento
+            telefone, domicilio, local_proprio, endereco:{cep, rua, numero, complemento, estado, cidade, bairro}, modalidade ,forma_pagamento
         })
         const colaboradoraAtualizado = await ColaboradoraSchema.find({ id })
             if(colaboradoraAtualizado.length == 0 ) {
@@ -146,7 +146,7 @@ const atualizarColaboradora = async (req, response) => {
             }
      
         response.status(200).json({
-            message: `Colaboradora atualizada com sucesso.`
+            message: `Colaboradora atualizada com sucesso.`,
             Colaboradora: colaboradoraAtualizado})
 
    } catch (error){
@@ -199,16 +199,16 @@ const createUser = async (req, res) => {
         message: err.message,
       })
     }
-  }
+}
 
-  const getAllUsers = async (req, res) => {
+const getAllUsers = async (req, res) => {
     UserSchema.find(function (err, users) {
       if (err) {
         res.status(500).send({ message: err.message })
       }
       res.status(200).send(users)
     })
-  }
+}
  
 
 module.exports = {
