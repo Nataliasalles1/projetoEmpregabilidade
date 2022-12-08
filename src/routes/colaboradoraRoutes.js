@@ -14,7 +14,7 @@ router.get("/getall", controller.buscarColaboradora);
 router.get("/modalidade", controller.buscarModalidade);
 router.get("/bairro", controller.buscarPorBairro);
 router.get("/buscar/:id", controller.obterColaboradoraPorId);
-router.post("/create", controller.criarColaboradora);
+router.post("/criar", controller.criarColaboradora);
 router.patch("/update/:id", controller.atualizarColaboradora);
 router.delete("/delete/:id", checkAuth, controller.deletarColaboradora);
 

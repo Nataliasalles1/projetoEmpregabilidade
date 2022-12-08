@@ -46,7 +46,10 @@ const buscarColaboradora = async(req, res) => {
 
     try {
         const colaboradoras = await ColaboradoraSchema.find(query);
-        res.status(200).json(colaboradoras)
+        res.status(200).json({
+            message: "Colaboradoras encontradas",
+            Colaboradoras: colaboradoras
+        })
 
     } catch (error) {
         res.status(500).json({
@@ -147,7 +150,8 @@ const atualizarColaboradora = async (req, response) => {
      
         response.status(200).json({
             message: `Colaboradora atualizada com sucesso.`,
-            Colaboradora: colaboradoraAtualizado})
+            Colaboradora: colaboradoraAtualizado
+        })
 
    } catch (error){
         response.status(400).json({
