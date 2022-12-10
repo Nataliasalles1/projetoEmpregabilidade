@@ -1,4 +1,4 @@
-const UserSchema = require('../models/UserSchema'); // importei o model
+const UserSchema = require('../models/UserModel'); // importei o model
 const bcrypt = require('bcrypt'); // importei o bcrypt para criptografar a senha
 const jwt = require('jsonwebtoken'); // importei o jwt para gerar o token
 
@@ -16,9 +16,6 @@ const login = (req, res) => {
                 });
             }
             
-            // quando eu chego aqui eu tenho um usuario que foi enviado no body da requisicao e um usuario no banco com o MESMO email
-            // eu preciso saber se as senhas deles tambem sao iguais
-            
             const validPassword = bcrypt.compareSync(req.body.password, user.password)
             console.log("A SENHA EH VALIDA AMOR?", validPassword)
             
@@ -29,7 +26,6 @@ const login = (req, res) => {
                 })
             }
             
-            // jwt.sign(nome do usuário, SEGREDO)
             const token = jwt.sign({name: user.name}, SECRET);
             console.log("Token: ", token)
             
@@ -43,6 +39,65 @@ const login = (req, res) => {
     }
 };
 
+const createUser = async (req, res) => {
+    const hashedPassword = bcrypt.hashSync(req.body.password, 10)
+    req.body.password = hashedPassword
+  
+    const emailExists = await UserSchema.exists({ email: req.body.email })
+  
+    if (emailExists) {
+      return res.status(409).send({
+        message: 'Email já cadastrado',
+      })
+    }
+  
+    try {
+      const newUser = new UserSchema(req.body)
+  
+      const savedUser = await newUser.save()
+  
+      res.status(201).send({
+        message: 'User cadastrado com sucesso!',
+        savedUser,
+      })
+    } catch (err) {
+      console.error(err)
+      res.status(500).send({
+        message: err.message,
+      })
+    }
+}
+
+const getAllUsers = async (req, res) => {
+    UserSchema.find(function (err, users) {
+      if (err) {
+        res.status(500).send({ message: err.message })
+      }
+      res.status(200).send(users)
+    })
+}
+
+const deleteUserById = async (req, res) => {
+    try {
+        const user = await UserSchema.findById(req.params.id);
+
+        if(!user) {
+            return res.status(404).json({message: "Usuário não encontrado."});
+        }
+
+        await user.delete();
+        res.status(200).json({message: "Usuário deletado com sucesso."})
+        
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        });
+    }
+}
+
 module.exports = {
-    login
+    login,
+    createUser,
+    getAllUsers,
+    deleteUserById
 };

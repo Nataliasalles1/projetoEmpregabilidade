@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const UserSchema = require('../models/UserSchema')
+const UserSchema = require('../models/UserModel')
 const bcrypt = require("bcrypt");
-const ColaboradoraSchema = require("../models/ColaboradoraSchema");
+const ColaboradoraSchema = require("../models/ColaboradoraModel");
 
 const criarColaboradora = async(req, res) => {
     const {nome, cpf, telefone, domicilio, local_proprio, endereco:{cep, rua, numero, complemento, estado, cidade, bairro}, modalidade ,forma_pagamento} = req.body;
@@ -59,9 +59,11 @@ const buscarColaboradora = async(req, res) => {
 }
 
 const buscarModalidade = async(req, res) => {
-    const modalidade = req.query.modalidade.toUpperCase()
+    const {modalidade} = req.query
+    let query = { };
+    if (modalidade) query.modalidade = new RegExp(modalidade, 'i');
     try {
-        const colaboradoras = await ColaboradoraSchema.filter(colaboradora => colaboradora.modalidade.toUpperCase().includes(modalidade))
+        const colaboradoras = await ColaboradoraSchema.find(query)
         if(colaboradoras.length == 0) throw new Error(`Desculpas, não temos coladoradoras na modalidade ${modalidade}`)
         res.status(200).json({
             message:"Colaboradoras localizadas",
@@ -77,9 +79,11 @@ const buscarModalidade = async(req, res) => {
 }
 
 const buscarPorBairro = async(req, res) => {
-    const bairro = req.query.bairro.toUpperCase()
+    const {bairro} = req.query
+    let query = { };
+    if (bairro) query["endereco.bairro"] = new RegExp(bairro, 'i');
     try {
-        const colaboradoras = await ColaboradoraSchema.filter(colaboradora => colaboradora.bairro.toUpperCase().includes(bairro))
+        const colaboradoras = await ColaboradoraSchema.find(query)
         if(colaboradoras.length == 0) throw new Error(`Desculpas, não temos coladoradoras no bairro ${bairro}`)
         res.status(200).json({
             message:"Colaboradoras localizadas",

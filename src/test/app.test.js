@@ -1,8 +1,14 @@
 const app = require('../app');
 const request = require('supertest');
-const model = require('../models/ColaboradoraSchema');
+const model = require('../models/ColaboradoraModel');
+const jwt = require('jsonwebtoken');
+
+const SECRET = process.env.SECRET;
 
 describe('Colaboradora Controller', () => {
+
+    const token = "bearer " + jwt.sign({ name: "Natalia"}, SECRET)
+
     const colaboradoraMock = {
         nome: "Colaboradora Teste",
         cpf: "123456789101122",
@@ -34,6 +40,32 @@ test('GET /colaboradora/getall', (done) => {
         .expect(200)
         .expect((res) => {
             expect(res.body.message).toBe("Colaboradoras encontradas")
+        })
+        .end((err) => {
+            if (err) return done(err)
+            return done()
+        })
+})
+
+test('GET /colaboradora/modality', (done) => {
+    request(app)
+        .get('/colaboradora/modality')
+        .expect(200)
+        .expect((res) => {
+            expect(res.body.message).toBe("Colaboradoras localizadas")
+        })
+        .end((err) => {
+            if (err) return done(err)
+            return done()
+        })
+})
+
+test('GET /colaboradora/bairro', (done) => {
+    request(app)
+        .get('/colaboradora/bairro')
+        .expect(200)
+        .expect((res) => {
+            expect(res.body.message).toBe("Colaboradoras localizadas")
         })
         .end((err) => {
             if (err) return done(err)
@@ -115,33 +147,15 @@ test('PATCH /colaboradora/update/:id', (done) => {
         })
 })
 
-/*test('DELETE /colaboradora/delete/:id', (done) => {
-    const colaboradoraBody = {
-        id: "",
-    }
+test('DELETE /colaboradora/delete/:id', (done) => {
     request(app)
         .delete('/colaboradora/delete/' + colaboradoraMock.id)
-        .send(colaboradoraBody)
+        .set("authorization", token)
         .expect(200)
-        .expect((res) => {
-            expect(res.body.message).toBe(`A colaboradora ${colaboradora.nome} foi removida com sucesso.`)
-        })
         .end((err) => {
             if (err) return done(err)
             return done()
         })
-})*/
-
-
-
-
-
-
-
-
-
-
-
-
+})
 
 })
