@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const EnderecoSchema = require('./EnderecoSchema');
+const AddressSchema = require('./AddressModel');
 
-const ColaboradoraSchema = new mongoose.Schema({
- 
-    nome: {
+const ProfessionalSchema = new mongoose.Schema({
+
+    name: {
         type: String,
         required: true
     },
@@ -13,36 +13,36 @@ const ColaboradoraSchema = new mongoose.Schema({
         required: true
     },
 
-    telefone:{
+    telephone: {
         type: String,
         required: false
     },
 
-    domicilio:{
+    residence: {
         type: Boolean,
         required: true
     },
 
-    local_proprio:{
+    own_place: {
         type: Boolean,
         required: true
     },
 
-    endereco:{
-        type: EnderecoSchema,
+    address: {
+        type: AddressSchema,
         required: true
     },
 
-    modalidade:{
+    modality: {
         type: String,
         required: true
     },
-    
-    forma_pagamento: [{
-        
+
+    payment_form: [{
+
     }]
 })
 
 
 
-module.exports = mongoose.model('colaboradora', ColaboradoraSchema) 
+module.exports = mongoose.model('Professional', ProfessionalSchema) 

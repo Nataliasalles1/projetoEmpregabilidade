@@ -11,7 +11,12 @@
             "src": "/(.*)",
             "dest": "src/app.js",
             "methods": [
-                "GET","POST","DELETE","PATCH","PUT","OPTIONS"
+                "GET",
+                "POST",
+                "DELETE",
+                "PATCH",
+                "PUT",
+                "OPTIONS"
             ]
         }
     ]

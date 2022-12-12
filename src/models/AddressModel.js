@@ -1,32 +1,32 @@
 const mongoose = require('mongoose');
 
-const EnderecoSchema = new mongoose.Schema({
+const AddressSchema = new mongoose.Schema({
 
-    cep: {
+    zip_code: {
         type: String,
         required: true
     },
-    rua: {
+    road: {
         type: String,
         required: true
     },
-    numero: {
+    number: {
         type: Number,
         required: true
     },
-    complemento: {
+    complement: {
         type: String,
         required: true
     },
-    estado: {
+    state: {
         type: String,
         required: true
     },
-    cidade: {
+    city: {
         type: String,
         required: true
     },
-    bairro: {
+    district: {
         type: String,
         required: true
     }
@@ -35,4 +35,4 @@ const EnderecoSchema = new mongoose.Schema({
 
 
 
-module.exports = EnderecoSchema
+module.exports = AddressSchema

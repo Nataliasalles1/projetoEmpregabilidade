@@ -20,15 +20,11 @@ seu alcance em relação aos clientes e trabalhando em marketing para trazer cad
 A ideia é fazer o cadastro dos profissionais, implementando uma aba com o portifólio do seu trabalho evidenciando o tipo de serviço prestado e traballhos concluidos,
 se há disponibilidade do atendimento em local próprio ou em domícilio e conectar o cliente a esses profissionais, tanto para serviços instantâneos ou agendados.
 
-O objetivo do projeto com os profissionais é dar autonomia aos profissionais e liberdade de negociação do seu trabalho, diminuir a lacuna de desemprego existente, e viabilizar a execução do trabalho
-independente de um local físico próprio.
+O objetivo do projeto com os profissionais é dar autonomia aos profissionais e liberdade de negociação do seu trabalho, diminuir a lacuna de desemprego existente, e viabilizar a execução do trabalho independente de um local físico próprio.
 
-O objetivo do projeto com os clientes irá trazer facilidade na procura de profissionais, maior segurança em atendimento domiciliar por ambos os lados terem
-cadastros e informações pessoais guardadas, encontrar profissionais em qualquer local do Brasil, buscar profissionais que cabem no orçamento e poder achar
-um profissionais mesmo sem agendamento prévio.
+O objetivo do projeto com os clientes irá trazer facilidade na procura de profissionais, maior segurança em atendimento domiciliar por ambos os lados terem cadastros e informações pessoais guardadas, encontrar profissionais em qualquer local do Brasil, buscar profissionais que cabem no orçamento e poder achar um profissionais mesmo sem agendamento prévio.
 
-A API permite que o usuário faça seu cadastro no site realize login, atualize seu cadastro e exclua seu cadastro. O usuário pode se cadastrar como colaborador ou cliente,
-caso o cadastrado seja como cliente, é possível listar os colaboradores por todos disponíveis, por modalidade, e por bairro.
+A API permite que o usuário faça seu cadastro no site realize login, atualize seu cadastro e exclua seu cadastro. O usuário pode se cadastrar como colaborador ou cliente, caso o cadastrado seja como cliente, é possível listar os colaboradores por todos disponíveis, por modalidade, e por bairro.
 
 
 ## Funcionalidades
@@ -60,7 +56,7 @@ caso o cadastrado seja como cliente, é possível listar os colaboradores por to
 - Supertest
 
 ## 📂Arquitetura MVC
-PROJETOEMPREGABILIDADE   |
+PROJETOEMPREGABILIDADE  
    |-  📁 src
    |    |
    |    |- 📁 config
