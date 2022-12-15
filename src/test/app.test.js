@@ -12,7 +12,7 @@ describe('Professional Controller', () => {
     const token = "bearer " + jwt.sign({ name: "Natalia" }, SECRET)
 
     const professionalMock = {
-        name: "Colaboradora Teste",
+        name: "Professional Teste",
         cpf: "123456789101122",
         telephone: "telefoneteste",
         residence: false,

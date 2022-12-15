@@ -78,9 +78,9 @@ const searchByModality = async (req, res) => {
 }
 
 const searchByDistrict = async (req, res) => {
-    const { destrict } = req.query
+    const { district } = req.query
     let query = {};
-    if (destrict) query["address.district"] = new RegExp(destrict, 'i');
+    if (district) query["address.district"] = new RegExp(district, 'i');
     try {
         const professional = await ProfessionalSchema.find(query)
         if (professional.length == 0) throw new Error(`Sorry, we don't have professionals available in district ${district}`)
