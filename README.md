@@ -1,3 +1,14 @@
+# Índice 
+
+* [Quem sou eu](#Quem-sou-eu)
+* [Introdução e objetivo](#Introdução-e-objetivo)
+* [Tecnologia e pacotes utilizados](#Tecnologia-e-pacotes-utilizados)
+* [Arquitetura MVC](#Arquitetura-MVC)
+* [Rotas](#Rotas)
+* [Como utilozar a API em seu computador](#Como-utilozar-a-API-em-seu-computador)
+* [Implementaçoes futuras](#Implementaçoes-futuras)
+
+
 # Impulsionando talentos: Empreendedorismo
 ![Logo](https://dropsdocotidiano.files.wordpress.com/2020/11/empreendedorismo-feminino-fecomercio-2.jpg?w=930&h=450&crop=1)
 
@@ -143,7 +154,6 @@ https://github.com/Nataliasalles1/projetoEmpregabilidade.git
 ```bash
 npm install ou npm i  
 ``` 
------------------------
 3º Passo - Configurar o ambiente
 ```bash
 Para configurar o ambiente é necessário duplicar o arquivo .env.examplee renomea-lo somente para .env. 
