@@ -1,12 +1,12 @@
 # Índice 
 
-* [Quem sou eu](#Quem-sou-eu)
+* [Quem sou eu](#Olá,-eu-sou-a-Natalia-Salles!-👋)
 * [Introdução e objetivo](#Introdução-e-objetivo)
-* [Tecnologia e pacotes utilizados](#Tecnologia-e-pacotes-utilizados)
+* [Tecnologia e pacotes utilizados](#TECNOLOGIAS-E-PACOTES-UTILIZADOS)
 * [Arquitetura MVC](#Arquitetura-MVC)
-* [Rotas](#Rotas)
-* [Como utilozar a API em seu computador](#Como-utilozar-a-API-em-seu-computador)
-* [Implementaçoes futuras](#Implementaçoes-futuras)
+* [Rotas](#ROTAS)
+* [Como utilizar a API em seu computador](#COMO-UTILIZAR-A-API-EM-SEU-COMPUTADOR)
+* [Implementaçoes futuras](#IMPLEMENTAÇÕES-FUTURAS)
 
 
 # Impulsionando talentos: Empreendedorismo
@@ -43,9 +43,11 @@ caso o cadastrado seja como cliente, é possível listar os colaboradores por to
 
 ## Funcionalidades
 
-- Listar todos os profissionais da API
-- Listar profissionais por meio de filtro
+- Listar todos os profissionais e clientes da API;
+- Listar profissionais e clientes por meio de filtro;
 - Cadastro, atualização, exclusão de profissionais;
+- Criação, atualização e exclusão de cliente;
+- Cadastro, atualização, exclusão de usuários;
 
 
 ## 👨‍💻TECNOLOGIAS E PACOTES UTILIZADOS
