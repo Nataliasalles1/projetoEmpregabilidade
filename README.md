@@ -1,27 +1,28 @@
 # Índice 
 
-* [Quem sou eu](#Olá,-eu-sou-a-Natalia-Salles!-👋)
-* [Introdução e objetivo](#Introdução-e-objetivo)
+* [OLÁ, EU SOU NATALIA SALLES!](#OLÁ,-EU-SOU-A-NATALIA-SALLES!-👋)
+* [INTRODUÇÃO E OBJETIVO](#INTRODUÇÃO-E-OBJETIVO)
+* [FUNCIONALIDADES](#FUNCINALIDADES)
 * [Tecnologia e pacotes utilizados](#TECNOLOGIAS-E-PACOTES-UTILIZADOS)
-* [Arquitetura MVC](#Arquitetura-MVC)
-* [Rotas](#ROTAS)
-* [Como utilizar a API em seu computador](#COMO-UTILIZAR-A-API-EM-SEU-COMPUTADOR)
-* [Implementaçoes futuras](#IMPLEMENTAÇÕES-FUTURAS)
+* [ARQUITETURA MVC](#ARQUITETURA-MVC)
+* [ROTAS](#🔃ROTAS)
+* [COMO UTILIZAR A API EM SEU COMPUTADOR](#📐COMO-UTILIZAR-A-API-EM-SEU-COMPUTADOR)
+* [IMPLEMENTAÇÕES FUTURAS](#IMPLEMENTAÇÕES-FUTURAS)
 
 
-# Impulsionando talentos: Empreendedorismo
+# IMPULSIONANDO TALENTOS: EMPREENDEDORISMO
 ![Logo](https://dropsdocotidiano.files.wordpress.com/2020/11/empreendedorismo-feminino-fecomercio-2.jpg?w=930&h=450&crop=1)
 
 Bem vindxs, ao projeto Impulsionando talentos! 
 Sinta-se a vontade para explorar e conhecer um pouco mais desse projeto social, ele foi pensado e desenvolvido como requisito final para a conclusão do curso "Todas em Tech" da {reprograma}.
 
 
-# Olá, eu sou a Natalia Salles! 👋
+# OLÁ, EU SOU NATALIA SALLES! 👋
 Moro em Salvador-Ba, tenho 25 anos, cursei Odontologia na Universidade Federal Fluminense, e no inicio do ano tomei a 
 decisão de migração de carreira, desde então, estou aprimorando cada vez mais minhas habilidades de desenvolvedora back-end.
 
 
-## Introdução e objetivo:
+## INTRODUÇÃO E OBJETIVO
 
 Diante do antagonismo entre diminuição do número de trabalhadores formais e aumento
 do trabalho autônomo, pensei em criar uma aplicação(app) que tem como objetivo, promover profissionais autônomos, ampliando
@@ -41,7 +42,7 @@ A API permite que o usuário faça seu cadastro no site realize login, atualize 
 caso o cadastrado seja como cliente, é possível listar os colaboradores por todos disponíveis, por modalidade, e por bairro.
 
 
-## Funcionalidades
+## FUNCIONALIDADES
 
 - Listar todos os profissionais e clientes da API;
 - Listar profissionais e clientes por meio de filtro;
@@ -71,7 +72,7 @@ caso o cadastrado seja como cliente, é possível listar os colaboradores por to
 - Nodemon
 - Supertest
 
-## 📂Arquitetura MVC
+## 📂ARQUITETURA MVC
 ````
 PROJETOEMPREGABILIDADE 
    |-  📁 src
