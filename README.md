@@ -1,9 +1,8 @@
-
 # Impulsionando talentos: Empreendedorismo
+![Logo](https://dropsdocotidiano.files.wordpress.com/2020/11/empreendedorismo-feminino-fecomercio-2.jpg?w=930&h=450&crop=1)
 
 Bem vindxs, ao projeto Impulsionando talentos! 
 Sinta-se a vontade para explorar e conhecer um pouco mais desse projeto social, ele foi pensado e desenvolvido como requisito final para a conclusão do curso "Todas em Tech" da {reprograma}.
-
 
 
 # Olá, eu sou a Natalia Salles! 👋
@@ -147,7 +146,9 @@ npm install ou npm i
 -----------------------
 3º Passo - Configurar o ambiente
 ```bash
-Para configurar o ambiente é necessário duplicar o arquivo .env.example e renomea-lo somente para .env. Em seguida, altere as informações contidas no arquivo .env para as informações correspondentes a sua máquinae inclua os valores para PORT com a porta, MONGO_URI com a URL do MongoDb e SECRET com o secret.
+Para configurar o ambiente é necessário duplicar o arquivo .env.examplee renomea-lo somente para .env. 
+Em seguida, altere as informações contidas no arquivo .env para as informações correspondentes a sua 
+máquinae inclua os valores para PORT com a porta, MONGO_URI com a URL DO MongoDb e SECRET com o secret.
 ``` 
 
 4º Passo - Executar a aplicação
