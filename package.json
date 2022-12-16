@@ -10,6 +10,7 @@
   "keywords": [],
   "author": "natalia-salles",
   "license": "ISC",
+  "url":"git+https://github.com/Nataliasalles1/projetoEmpregabilidade/tree/master",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",

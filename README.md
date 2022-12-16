@@ -1,12 +1,11 @@
 # Índice 
 
-* [OLÁ, EU SOU NATALIA SALLES!](#OLÁ,-EU-SOU-A-NATALIA-SALLES!-👋)
 * [INTRODUÇÃO E OBJETIVO](#INTRODUÇÃO-E-OBJETIVO)
-* [FUNCIONALIDADES](#FUNCINALIDADES)
-* [Tecnologia e pacotes utilizados](#TECNOLOGIAS-E-PACOTES-UTILIZADOS)
+* [FUNCIONALIDADES](#FUNCIONALIDADES)
+* [TECNOLOGIAS E PACOTES UTILIZADOS](#TECNOLOGIAS-E-PACOTES-UTILIZADOS)
 * [ARQUITETURA MVC](#ARQUITETURA-MVC)
-* [ROTAS](#🔃ROTAS)
-* [COMO UTILIZAR A API EM SEU COMPUTADOR](#📐COMO-UTILIZAR-A-API-EM-SEU-COMPUTADOR)
+* [ROTAS](#ROTAS)
+* [COMO UTILIZAR A API EM SEU COMPUTADOR](#COMO-UTILIZAR-A-API-EM-SEU-COMPUTADOR)
 * [IMPLEMENTAÇÕES FUTURAS](#IMPLEMENTAÇÕES-FUTURAS)
 
 
@@ -17,7 +16,7 @@ Bem vindxs, ao projeto Impulsionando talentos!
 Sinta-se a vontade para explorar e conhecer um pouco mais desse projeto social, ele foi pensado e desenvolvido como requisito final para a conclusão do curso "Todas em Tech" da {reprograma}.
 
 
-# OLÁ, EU SOU NATALIA SALLES! 👋
+# OLÁ, EU SOU NATÁLIA SALLES! 👋
 Moro em Salvador-Ba, tenho 25 anos, cursei Odontologia na Universidade Federal Fluminense, e no inicio do ano tomei a 
 decisão de migração de carreira, desde então, estou aprimorando cada vez mais minhas habilidades de desenvolvedora back-end.
 
@@ -42,7 +41,7 @@ A API permite que o usuário faça seu cadastro no site realize login, atualize 
 caso o cadastrado seja como cliente, é possível listar os colaboradores por todos disponíveis, por modalidade, e por bairro.
 
 
-## FUNCIONALIDADES
+## 🔨FUNCIONALIDADES
 
 - Listar todos os profissionais e clientes da API;
 - Listar profissionais e clientes por meio de filtro;
