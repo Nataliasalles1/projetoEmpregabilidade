@@ -1,7 +1,7 @@
 {
   "name": "api-empreendedora",
   "version": "1.0.0",
-  "description": "",
+  "description": "Um olhar sobre a importância da tecnologia na promoção de trabalhadores autônomos.",
   "main": "server.js",
   "scripts": {
     "test": "jest --forceExit",
@@ -10,7 +10,6 @@
   "keywords": [],
   "author": "natalia-salles",
   "license": "ISC",
-  "url":"git+https://github.com/Nataliasalles1/projetoEmpregabilidade/tree/master",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
