@@ -116,7 +116,7 @@ PROJETOEMPREGABILIDADE
    |- 📑 vercel.json`
 ````
 
-## 🔃 ROTAS
+## 🔃ROTAS
 
 | Metodos HTTP|Rotas - Usuários| Funções                               
 | -----------| ----------   | --------------------------------------|
@@ -144,7 +144,7 @@ PROJETOEMPREGABILIDADE
 | PATCH        |/client/update/:id| Atualiza dados de cliente        
 | DELETE       |/client/delete/:id| Exclui cliente do banco de dados 
 
-## 📐 COMO UTILIZAR A API EM SEU COMPUTADOR
+## 📐COMO UTILIZAR A API EM SEU COMPUTADOR
 
 1º Passo - clonar o repositório
 - Clone esse repositório em sua máquina local
@@ -169,7 +169,7 @@ máquinae inclua os valores para PORT com a porta, MONGO_URI com a URL DO MongoD
 npm start
 ```
 
-## 🏗️ IMPLEMENTAÇÕES FUTURAS
+## 🏗️IMPLEMENTAÇÕES FUTURAS
 - Implementação do front-end
 - Implementar catálogos de fotos para profissionais
 - Adaptar a API para um formato de APP;
